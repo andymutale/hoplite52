@@ -6,9 +6,24 @@ import { Bloom, EffectComposer, ToneMapping } from "@react-three/postprocessing"
 import * as THREE from 'three';
 import { Suspense } from "react";
 import {Toy_ktx2} from "./models/Toy_ktx2";
+import { useErrorBoundary } from 'use-error-boundary'
+
 
 
 export default function Footer() {
+
+  const { ErrorBoundary, didCatch, error } = useErrorBoundary();
+
+  if (didCatch) {
+    return (
+      <footer className="relative w-full h-screen flex items-center justify-center bg-black text-red-500">
+        <div className="text-center">
+          <h2 className="text-lg font-bold">Model Error</h2>
+          <p className="text-sm mt-2">{error.message}</p>
+        </div>
+      </footer>
+    );
+  }
   return (
     <footer className="relative w-full h-screen overflow-hidden bg-black text-white font-inter">
       <Stats
@@ -16,6 +31,8 @@ export default function Footer() {
         className="stats-overlay"
       />
       <div className="absolute inset-0 z-0">
+        
+        <ErrorBoundary>
         <Canvas flat shadows camera={{ position: [-15, 0, 10], fov: 20 }}     >
           <fog attach="fog" args={["black", 15, 22.5]} />
           <Stage intensity={0.5} environment="city" shadows={{ type: "accumulative", bias: -0.001, intensity: Math.PI, }} adjustCamera={false}
@@ -61,6 +78,7 @@ export default function Footer() {
           />
           <Preload all />
         </Canvas>
+        </ErrorBoundary>
       </div>
 
       {/*Overlay */}
