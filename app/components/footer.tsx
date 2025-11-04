@@ -75,8 +75,8 @@ export default function Footer() {
           <Grid
             renderOrder={-1} position={[0, -2.85, 0]} infiniteGrid cellSize={0.6} sectionSize={3.3} sectionThickness={1.5} sectionColor={new THREE.Color(0.5, 0.5, 1.0)} fadeDistance={20}
           />
-          <OrbitControls enableRotate={false} enablePan={false} autoRotate autoRotateSpeed={1.4} enableZoom={false} makeDefault minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2}
-          />
+         {/* <OrbitControls enableRotate={false} enablePan={false} autoRotate autoRotateSpeed={1.4} enableZoom={false} makeDefault minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2}
+          />*/}
           <Preload all />
           </ScrollControls>
         </Canvas>
