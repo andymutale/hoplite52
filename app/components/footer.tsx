@@ -1,7 +1,7 @@
 "use client";
 
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Environment, Grid, Stage , Stats, BakeShadows,Preload, Lightformer } from "@react-three/drei";
+import { OrbitControls, Environment, Grid, Stage , Stats, BakeShadows,Preload, Lightformer, ScrollControls } from "@react-three/drei";
 import { Bloom, EffectComposer, ToneMapping } from "@react-three/postprocessing";
 import * as THREE from 'three';
 import { Suspense } from "react";
@@ -34,6 +34,7 @@ export default function Footer() {
         
         <ErrorBoundary>
         <Canvas flat shadows camera={{ position: [-15, 0, 10], fov: 20 }}     >
+          <ScrollControls pages={1}>
           <fog attach="fog" args={["black", 15, 22.5]} />
           <Stage intensity={0.5} environment="city" shadows={{ type: "accumulative", bias: -0.001, intensity: Math.PI, }} adjustCamera={false}
           >
@@ -77,6 +78,7 @@ export default function Footer() {
           <OrbitControls enableRotate={false} enablePan={false} autoRotate autoRotateSpeed={1.4} enableZoom={false} makeDefault minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2}
           />
           <Preload all />
+          </ScrollControls>
         </Canvas>
         </ErrorBoundary>
       </div>
