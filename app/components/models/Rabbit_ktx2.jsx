@@ -20,4 +20,4 @@ export function Rabbit_ktx2(props) {
   )
 }
 
-useGLTF.preload('/rabbit_ktx2-transformed.glb')
+useGLTF.preload('/models/rabbit_ktx2-transformed.glb')
