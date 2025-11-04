@@ -5,7 +5,7 @@ import { OrbitControls, Environment, Grid, Stage , Stats, BakeShadows,Preload, L
 import { Bloom, EffectComposer, ToneMapping } from "@react-three/postprocessing";
 import * as THREE from 'three';
 import { Suspense } from "react";
-import Boi from "./models/Boi";
+import {Rabbit_ktx2} from "./models/Rabbit_ktx2";
 
 
 export default function Footer() {
@@ -24,7 +24,7 @@ export default function Footer() {
               
                 <group >  
                   <BakeShadows/>           
-                   <Boi scale={1} position={[0, 0, 0]} />
+                   <Rabbit_ktx2 scale={1} position={[0, 0, 0]} />
               
                 </group>
                 
