@@ -7,13 +7,27 @@ Source: https://sketchfab.com/3d-models/toy-robot-animated-lowpoly-6bc8f39aac354
 Title: Toy Robot Animated - Lowpoly
 */
 
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 
 export function Toy_ktx2(props) {
-  const group = React.useRef()
+  const group = useRef()
   const { nodes, materials, animations } = useGLTF('/models/toy_ktx2.glb')
-  const { actions } = useAnimations(animations, group)
+  const { actions, names } = useAnimations(animations, group)
+
+  useEffect(() => {
+    if (!actions || names.length === 0) {
+      console.warn('⚠️ No animations found in toy_ktx2.glb')
+      return
+    }
+
+    console.log('🎞 Available animations:', names)
+    const action = actions[names[0]]
+    action?.reset().fadeIn(0.5).play()
+
+    return () => action?.fadeOut(0.5).stop()
+  }, [actions, names])
+
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
