@@ -17,12 +17,15 @@ export function Rabbit_ktx2(props) {
 
   const { nodes, materials } = useGLTF(
     '/models/rabbit_ktx2-transformed.glb',
-    true, // useDraco = true
-    true, // useMeshOpt = true
+    true, // useDraco
+    true, // useMeshOpt
     (loader) => {
       const ktx2Loader = new KTX2Loader()
-      ktx2Loader.setTranscoderPath('https://unpkg.com/three@0.168.0/examples/jsm/libs/basis/')
-      loader.setKTX2Loader(ktx2Loader.detectSupport(gl))
+      ktx2Loader
+        .setTranscoderPath('https://unpkg.com/three@0.168.0/examples/jsm/libs/basis/')
+        .detectSupport(gl)
+
+      loader.setKTX2Loader(ktx2Loader)
     }
   )
 
