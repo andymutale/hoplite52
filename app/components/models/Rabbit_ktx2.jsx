@@ -12,7 +12,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Rabbit_ktx2(props) {
-  const { nodes, materials } = useGLTF('/rabbit_ktx2-transformed.glb')
+  const { nodes, materials } = useGLTF('/models/rabbit_ktx2-transformed.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Object_2.geometry} material={materials.lambert2} rotation={[-Math.PI / 2, 0, 0]} />
