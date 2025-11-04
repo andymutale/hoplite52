@@ -7,35 +7,15 @@ License: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 Source: https://sketchfab.com/3d-models/robo-rabbit-v3-073b02715024472a8e1f5bb2627d190f
 Title: Robo Rabbit V3
 */
-'use client'
+
 import React from 'react'
-import { useGLTF, useThree } from '@react-three/drei'
-import { KTX2Loader } from 'three-stdlib'
+import { useGLTF } from '@react-three/drei'
 
 export function Rabbit_ktx2(props) {
-  const { gl } = useThree()
-
-  const { nodes, materials } = useGLTF(
-    '/models/rabbit_ktx2-transformed.glb',
-    true, // useDraco
-    true, // useMeshOpt
-    (loader) => {
-      const ktx2Loader = new KTX2Loader()
-      ktx2Loader
-        .setTranscoderPath('https://unpkg.com/three@0.168.0/examples/jsm/libs/basis/')
-        .detectSupport(gl)
-
-      loader.setKTX2Loader(ktx2Loader)
-    }
-  )
-
+  const { nodes, materials } = useGLTF('/models/rabbit_ktx2-transformed.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh
-        geometry={nodes.Object_2.geometry}
-        material={materials.lambert2}
-        rotation={[-Math.PI / 2, 0, 0]}
-      />
+      <mesh geometry={nodes.Object_2.geometry} material={materials.lambert2} rotation={[-Math.PI / 2, 0, 0]} />
     </group>
   )
 }
