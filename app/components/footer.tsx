@@ -33,7 +33,7 @@ export default function Footer() {
       <div className="absolute inset-0 z-0">
         
         <ErrorBoundary>
-        <Canvas flat shadows camera={{ position: [-15, 0, 10], fov: 20 }}     >
+        <Canvas flat shadows camera={{ position: [-15, 0, 10], fov: 20 }}  className="touch-none" >
           <ScrollControls pages={1}>
           <fog attach="fog" args={["black", 15, 22.5]} />
           <Stage intensity={0.5} environment="city" shadows={{ type: "accumulative", bias: -0.001, intensity: Math.PI, }} adjustCamera={false}
