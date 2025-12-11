@@ -10,6 +10,7 @@ Title: Toy Robot Animated - Lowpoly
 import React, { useEffect, useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 
+
 export function Toy_ktx2(props) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/models/toy_ktx2.glb')
