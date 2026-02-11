@@ -49,10 +49,10 @@ export default function Footer() {
             Let’s Work Together
           </p>
           <a
-            href="mailto:hello@andymutale.com"
+            href="mailto:andy@andymutale.com"
             className="text-[clamp(1rem,3vw,1.75rem)] font-medium opacity-90 hover:text-blue-400 transition-colors"
           >
-            hello@andymutale.com
+            andy@andymutale.com
           </a>
         </div>
 
