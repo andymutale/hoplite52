@@ -1,20 +1,15 @@
-'use client'
+import Header from "@/components/Header";
+import IdentityStrip from "@/components/IdentityStrip";
+import ProjectFeed from "@/components/ProjectFeed";
+import Footer from "@/components/Footer";
 
-
-import Hero  from './components/hero';
-import Footer from './components/footer';
-
-import Navbar from './components/navbar';
-
-export default function Page() {
-
-  
+export default function Home() {
   return (
     <>
-    
-    <Navbar />
-    <Hero />
-    <Footer />
+      <Header />
+      <IdentityStrip />
+      <ProjectFeed />
+      <Footer />
     </>
-  )
+  );
 }
