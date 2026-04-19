@@ -7,7 +7,7 @@ export default function Footer() {
           <a href="mailto:hello@andymutale.com">hello@andymutale.com</a>
         </div>
         <div className="footer-right">
-          <a href="https://github.com/andymmutale" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/andymutale" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
           <a href="https://linkedin.com/in/andy-mutale" target="_blank" rel="noopener noreferrer">
