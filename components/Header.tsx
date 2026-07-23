@@ -194,7 +194,7 @@ export default function Header() {
               }}
             >
               {[
-                { label: "GitHub", href: "https://github.com/andymmutale" },
+                { label: "GitHub", href: "https://github.com/andymutale" },
                 { label: "LinkedIn", href: "https://linkedin.com/in/andy-mutale" },
               ].map((s) => (
                 <a
