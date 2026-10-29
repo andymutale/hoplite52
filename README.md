@@ -1,54 +1,31 @@
-# Andy Mutale — Portfolio (Next.js)
+# Hey, I'm Andy Mutale.
 
-A Next.js 14 App Router conversion of the original single-file HTML portfolio.
+I'm a software developer based in South Africa, focused on front-end engineering and practical technical software.
 
-## Stack
+I build responsive interfaces, TypeScript applications, and tools that connect design intent to real application behaviour. I'm interested in UI systems, API integration, performance, testing, and the engineering practices that keep software maintainable.
 
-- **Next.js 14** — App Router
-- **TypeScript** — fully typed
-- **Google Fonts** — Instrument Serif + Geist via `next/font`
-- **CSS custom properties** — no CSS framework, faithful to original design tokens
+## Selected work
 
-## Project structure
+**Hoplite — Pickability Check**  
+An independent technical feasibility tool exploring vision-guided robotic bin picking.
 
-```
-├── app/
-│   ├── globals.css       # All CSS (design tokens, layout, components)
-│   ├── layout.tsx        # Root layout — fonts, metadata
-│   └── page.tsx          # Home page — composes all sections
-├── components/
-│   ├── Header.tsx        # Sticky nav bar
-│   ├── IdentityStrip.tsx # Hero name + availability
-│   ├── ProjectFeed.tsx   # Filter bar + project rows + notes + about (client)
-│   ├── CaseStudyPanel.tsx# Slide-in case study drawer (client)
-│   ├── MiniGrid.tsx      # Animated yellow grid thumbnail (client)
-│   └── Footer.tsx        # Copyright + links
-├── data/
-│   ├── projects.ts       # All 7 projects + case study content
-│   └── notes.ts          # Writing/notes entries
-└── public/               # Static assets (add your own images here)
-```
+**PrecisionCore**  
+A fictional automotive supplier platform exploring product information, documentation, and operational interfaces.
 
-## Getting started
+**Store**  
+A full-stack commerce application exploring storefront functionality, payment integration, and backend workflows.
 
-```bash
-npm install
-npm run dev
-```
+**Experiments**  
+WebGL, simulations, games, and interface explorations developed to investigate specific technical problems.
 
-Open [http://localhost:3000](http://localhost:3000).
+## Areas of interest
 
-## Customisation
+TypeScript · JavaScript · Front-End Engineering · UI Systems · REST APIs · Testing · Git · CI/CD · Cloud Infrastructure
 
-- **Projects** — edit `data/projects.ts` to update titles, descriptions, case study copy, stack chips, and stats
-- **Notes** — edit `data/notes.ts` to add/remove writing entries
-- **Design tokens** — all colours and spacing live at the top of `app/globals.css` in `:root`
-- **About copy** — edit the about section inside `components/ProjectFeed.tsx`
+Portfolio: https://andymutale.com/  
+LinkedIn: https://www.linkedin.com/in/andy-mutale  
+Medium: https://medium.com/@drewmutale
 
-## Deploying to Vercel
+## Project case-study template
 
-```bash
-npx vercel
-```
-
-Or push to GitHub and import the repo in [vercel.com](https://vercel.com) — zero config needed.
+The Michael Wood and Precision Core case studies share the Mubien-inspired editorial layout in `project-template.css`: a sticky project-details rail on desktop, compact project introduction, wide hero media, and spacious story/gallery sections. Their top navigation, pixel-art sky/contact footer, and interactive critters are carried over from `index.html`. For a new static case study, duplicate either case-study page, update its project-specific content and next-project link, and keep the shared shell/rail structure and `project-template.css` link.

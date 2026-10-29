@@ -1,0 +1,29 @@
+
+
+.aa{
+    align-items: flex-start;
+    padding: 50px;
+}
+.aa::before{
+    background: hsla(0, 0%, 95%, .5);
+ 
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.foot{
+    width: clamp(90px,9.375vw,180px);
+}
+
+@supports (backdrop-filter: blur(50px)){
+    footer::before{
+        backdrop-filter: blur(50px);
+        background: hsla(0, 0%, 95%, .5);
+    }
+}
