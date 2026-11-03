@@ -1128,7 +1128,7 @@ Rapier</div></div><div class="info-item"><div class="info-label">Status</div><di
 <div class="project-intro">A browser tool that tells an engineer, before they buy a robot cell, how many parts in a bin a robot could realistically pick.</div></div>
 <div class="intro-bottom"><span>01 &mdash; About the project</span><span>Scroll to explore &darr;</span></div>
 </header>
-<figure class="hero-media"><div class="hero-media-inner"><div class="hero-placeholder">PICK</div></div>
+<figure class="hero-media"><div class="hero-media-inner" style="background:#fff"><video autoplay loop muted playsinline preload="metadata" poster="img/hoplite37/pickability-results-poster.jpg" aria-label="Pickability results with parts coloured by bucket and counts" style="width:100%;height:100%;display:block;object-fit:contain"><source src="img/hoplite37/pickability-results.webm" type="video/webm"/><source src="img/hoplite37/pickability-results.mp4" type="video/mp4"/></video></div>
 <figcaption class="caption">Hoplite 037 — the Pickability Check results view.</figcaption></figure>
 <section class="section" id="overview"><div class="narrow">
 <div class="section-label">01 / THE PROJECT</div>
@@ -1143,7 +1143,7 @@ Rapier</div></div><div class="info-item"><div class="info-label">Status</div><di
 per screen.</h2>
 <div class="body-copy"><p>The app is a seven-step wizard: Target, Bin, Gripper, Robot, Pick Point, Layout, Results. Each screen asks one thing, and every answer is kept in a single shared store.</p>
 <p>The steps only write to the store. The Results step reads it and runs the test, so there is one place where every input lives.</p></div></div>
-<figure class="media media-landscape split-media"><div class="media-content">WIZARD</div></figure>
+<figure class="media media-landscape split-media" style="aspect-ratio:auto"><video autoplay loop muted playsinline preload="metadata" poster="img/hoplite37/end-of-arm-tooling-poster.jpg" aria-label="Choosing a gripper in step three of the seven-step wizard" style="width:100%;height:auto;display:block"><source src="img/hoplite37/end-of-arm-tooling.webm" type="video/webm"/><source src="img/hoplite37/end-of-arm-tooling.mp4" type="video/mp4"/></video></figure>
 </div></section>
 <section class="section"><div class="system-grid">
 <h2 class="system-title">Seven questions,
@@ -1163,7 +1163,7 @@ one answer.</h2>
 expensive to find out.</h2>
 <div class="body-copy"><p>A bin-picking cell is a large purchase, and the first real trial usually happens after it is bought. Hoplite 037 moves that first estimate earlier, to the engineer's laptop.</p>
 <p>Each virtual part runs through checks in a fixed order: tilt, gripper fit, collisions, hidden-ness, then reach. The first check a part fails decides its bucket. The slowest check, reach, goes last so it only runs for parts that passed everything else.</p></div></div>
-<figure class="media media-portrait split-media"><div class="media-content">BUCKETS</div></figure>
+<figure class="media media-portrait split-media"><img src="img/hoplite37/results-buckets.jpg" alt="Twenty simulated parts scattered in the bin, coloured by the bucket they landed in" loading="lazy" decoding="async"/></figure>
 </div></section>
 <section class="section" id="process">
 <div class="section-label">03 / PROCESS</div>
@@ -1179,10 +1179,10 @@ expensive to find out.</h2>
 used as a ruler.</h2>
 <div class="body-copy"><p>Rapier runs in the browser as WebAssembly, but the world is never stepped. There is no settling and no falling — only one-shot geometric questions asked of static shapes: does this box overlap that one, and what does a ray hit?</p>
 <p>Reachability uses a hand-written inverse-kinematics solver. It nudges the robot's joints up to 100 times, respecting each joint's limits, and tries four starting poses before it gives up and calls a part Unreachable.</p></div></div>
-<figure class="media media-portrait split-media"><div class="media-content">IK</div></figure>
+<figure class="media media-portrait split-media"><img src="img/hoplite37/robot-reach.jpg" alt="The robot arm on its grid, used for the reachability check" loading="lazy" decoding="async"/></figure>
 </div></section>
 <section class="section"><div class="section-label">DETAILS</div>
-<div class="gallery"><figure class="gallery-item large"><div class="media media-wide"><div class="media-content">TARGET</div></div><figcaption class="caption">Uploading a CAD model and measuring its bounding box.</figcaption></figure><figure class="gallery-item"><div class="media media-square"><div class="media-content">PICK</div></div><figcaption class="caption">Setting the ideal grasp orientation with a 3D handle.</figcaption></figure><figure class="gallery-item"><div class="media media-square"><div class="media-content">RESULTS</div></div><figcaption class="caption">Parts coloured by bucket, with counts and percentages.</figcaption></figure></div></section>
+<div class="gallery"><figure class="gallery-item large"><div class="media media-wide" style="aspect-ratio:auto"><video autoplay loop muted playsinline preload="metadata" poster="img/hoplite37/bin-part-volume-poster.jpg" aria-label="Setting the bin size around the part" style="width:100%;height:auto;display:block"><source src="img/hoplite37/bin-part-volume.webm" type="video/webm"/><source src="img/hoplite37/bin-part-volume.mp4" type="video/mp4"/></video></div><figcaption class="caption">Setting the bin's working volume around the part.</figcaption></figure><figure class="gallery-item"><div class="media media-square" style="aspect-ratio:auto"><video autoplay loop muted playsinline preload="metadata" poster="img/hoplite37/grasp-orientation-poster.jpg" aria-label="Setting the ideal grasp orientation with a 3D handle on the robot arm" style="width:100%;height:auto;display:block"><source src="img/hoplite37/grasp-orientation.webm" type="video/webm"/><source src="img/hoplite37/grasp-orientation.mp4" type="video/mp4"/></video></div><figcaption class="caption">Setting the ideal grasp orientation with a 3D handle.</figcaption></figure><figure class="gallery-item"><div class="media media-square" style="aspect-ratio:auto"><img src="img/hoplite37/results-panel.jpg" alt="Results panel listing each bucket with its count and percentage" loading="lazy" decoding="async"style="height:auto;min-height:0;max-height:none"/></div><figcaption class="caption">Parts coloured by bucket, with counts and percentages.</figcaption></figure></div></section>
 <section style="padding: 0;"><div class="dark-section"><div class="dark-inner">
 <div class="dark-label">04 / THE PRINCIPLE</div>
 <h2 class="dark-statement">A tool for early
